@@ -4,7 +4,7 @@ Print out your name onto the console.
 e.g. your program should print "Andy Min".
  */
 fun level1() {
-    printl("Adi")
+    println("Adi")
 }
 
 /*
@@ -16,6 +16,8 @@ that variable has.
  */
 fun level2() {
     // Your code here
+    val myName = "Aditya Kewalram"
+    println(myName.length)
 }
 
 /*
