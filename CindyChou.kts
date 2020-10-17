@@ -27,9 +27,3 @@ e.g. Entering "tHis iS a rANdoM meSSagE" should print out "HSANMSSE"
 fun level3() {
     // Your code here
 }
-
-
-
-level1()
-level2()
-level3()
