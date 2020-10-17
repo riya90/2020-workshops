@@ -4,7 +4,7 @@ import kotlin.system.exitProcess
 //calculator program remade hehe
 
 fun main() {
-    print("Choose an operator: +, -, /, *, **2, sqrt, notes: ")
+    print("[*] Choose an operator: +, -, /, *, **2, sqrt, notes: ")
     val x = readLine()
     when(x) {
         "+" -> add()
@@ -16,24 +16,24 @@ fun main() {
         "sqrt" -> sqrt()
         "notes" -> notes()
         else -> {
-            print("Invalid Input!")
+            print("[*] Invalid Input!")
         }
     }
 }
 fun add() {
-    print("How many numbers would you like to add? ")
+    print("[*] How many numbers would you like to add? ")
     val amount = readLine()!!
     val enteredAmount = amount.toInt()
     var mutableList = mutableListOf<Int>()
     for (i in 0 until enteredAmount) {
-        print("Enter a number: ")
+        print("[*] Enter a number: ")
         val enteredNumber = readLine()!!
         val Number = enteredNumber.toInt()
         mutableList.add(Number)
     }
     print(mutableList.sum())
     print("\n")
-    print("Would you like to exit? Yes or No: ")
+    print("[*] Would you like to exit? Yes or No: ")
     val cont = readLine()!!
     if (cont == "No") {
         main()
@@ -43,12 +43,12 @@ fun add() {
     }
 }
 fun sub() {
-    print("How many numbers would you like to subtract? ")
+    print("[*] How many numbers would you like to subtract? ")
     val amount = readLine()!!
     val enteredAmount = amount.toInt()
     var mutableList = mutableListOf<Int>()
     for (i in 0 until enteredAmount) {
-        print("Enter a number: ")
+        print("[*] Enter a number: ")
         val enteredNumber = readLine()!!
         val Number = enteredNumber.toInt()
         mutableList.add(Number)
@@ -60,7 +60,7 @@ fun sub() {
     }
     print(saveNum)
     print("\n")
-    print("Would you like to exit? Yes or No: ")
+    print("[*] Would you like to exit? Yes or No: ")
     val cont = readLine()!!
     if (cont == "No") {
         main()
@@ -71,12 +71,12 @@ fun sub() {
 }
 
 fun divide() {
-    print("How many numbers would you like to divide? ")
+    print("[*] How many numbers would you like to divide? ")
     val x = readLine()!!
     val xInt = x.toInt()
     var mutableList = mutableListOf<Int>()
     for (i in 0 until xInt) {
-        print("Enter a number: ")
+        print("[*] Enter a number: ")
         val input = readLine()!!
         val inputInt = input.toInt()
         mutableList.add(inputInt)
@@ -88,7 +88,7 @@ fun divide() {
     }
     print(saveNum)
     print("\n")
-    print("Would you like to exit? Yes or No: ")
+    print("[*] Would you like to exit? Yes or No: ")
     val cont = readLine()!!
     if (cont == "No") {
         main()
@@ -99,12 +99,12 @@ fun divide() {
 }
 
 fun multiply() {
-    print("How many numbers would you like to multiply? ")
+    print("[*] How many numbers would you like to multiply? ")
     val x = readLine()!!
     val xInt = x.toInt()
     var mutableList = mutableListOf<Int>()
     for (i in 0 until xInt) {
-        print("Enter a number: ")
+        print("[*] Enter a number: ")
         val input = readLine()!!
         val inputInt = input.toInt()
         mutableList.add(inputInt)
@@ -116,7 +116,7 @@ fun multiply() {
     }
     print(saveNum)
     print("\n")
-    print("Would you like to exit? Yes or No: ")
+    print("[*] Would you like to exit? Yes or No: ")
     val cont = readLine()!!
     if (cont == "No") {
         main()
@@ -127,13 +127,13 @@ fun multiply() {
 }
 
 fun squared() {
-    print("What number would you like to square? ")
+    print("[*] What number would you like to square? ")
     val x = readLine()!!
     val xInt = x.toInt()
     val xSquared = xInt * xInt
     print("$xSquared")
     print("\n")
-    print("Would you like to exit? Yes or No: ")
+    print("[*] Would you like to exit? Yes or No: ")
     val cont = readLine()!!
     if (cont == "No") {
         main()
@@ -144,13 +144,13 @@ fun squared() {
 }
 
 fun sqrt() {
-    print("What number would you like to square root? ")
+    print("[*] What number would you like to square root? ")
     val x = readLine()!!
     val xInt = x.toDouble()
     val xSqrRoot = Math.sqrt(xInt)
     print("$xSqrRoot")
     print("\n")
-    print("Would you like to exit? Yes or No: ")
+    print("[*] Would you like to exit? Yes or No: ")
     val cont = readLine()!!
     if (cont == "No") {
         main()
@@ -161,12 +161,12 @@ fun sqrt() {
 }
 
 fun notes() {
-    print("What file would you like to take notes in? ")
+    print("[*] What file would you like to take notes in? ")
     val noteFile = readLine()
-    println("Start of Notes...")
+    println("[*] Start of Notes...")
     val noteVar = readLine()!!
     File("$noteFile").writeText("$noteVar")
-    print("Would you like to exit? Yes or No: ")
+    print("[*] Would you like to exit? Yes or No: ")
     val contChoice = readLine()!!
     if (contChoice == "Yes") {
         exitProcess(1)
@@ -177,16 +177,16 @@ fun notes() {
 }
 
 fun square() {
-    print("What number would you like to square by x: ")
+    print("[*] What number would you like to square by x: ")
     val number = readLine()!!
     val intNumber = number.toDouble()
-    print("What number would you like to square $intNumber by: ")
+    print("[*] What number would you like to square $intNumber by: ")
     val intNumberSqr = readLine()!!
     var intIntNumber = intNumberSqr.toDouble()
     val result = Math.pow(intNumber, intIntNumber)
     print(result)
     print("\n")
-    print("Would you like to exit? Yes or No: ")
+    print("[*] Would you like to exit? Yes or No: ")
     val contChoice = readLine()!!
     if (contChoice == "Yes") {
         exitProcess(1)
